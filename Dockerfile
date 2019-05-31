@@ -14,6 +14,9 @@ RUN rm -rf /usr/local/bundle/cache/*.gem \
 
 FROM ruby:${RUBY_VERSION}
 
+RUN apk add --update \
+  git
+
 LABEL io.whalebrew.name 'colorls'
 LABEL io.whalebrew.config.working_dir '/workdir'
 WORKDIR /workdir
